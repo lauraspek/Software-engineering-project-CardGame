@@ -1,0 +1,76 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	
+	<ui:style>
+		.gwt-Button{
+			margin-right: 10px !important;
+
+		}
+		.box1{
+			text-align: center;
+		}
+		h1{
+			margin-bottom:3px;
+		}
+		.left{
+			width: 60%;
+			padding:40px;
+		}
+		.right{
+			width:40%;
+			padding:40px;
+		}
+		.searchbox{
+		}
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<div class="{style.box1}">
+			<h1>Benvenuto</h1>
+			<gwt:Label ui:field="email" />
+		</div>
+		<div class="{style.box1}">
+			<gwt:Button ui:field = "btnHome" text="Home"/>
+			<gwt:Button ui:field = "btnScambi" text="Scambi"/>
+			<gwt:Button ui:field = "btnDeck" text="I tuoi deck"/>
+			<gwt:Button ui:field = "btnLogout" text="Logout"/>
+		</div>
+		<div class="{style.left}">
+			<div class="{style.searchbox}">
+				<label for="search">Cerca per nome</label>
+		        <gwt:TextBox ui:field="cardNameTextBox" />
+		        <!-- List box per la scelta del gioco -->
+		        <gwt:ListBox ui:field="gameListBox">
+		            <gwt:item>Seleziona un gioco</gwt:item>
+		            <gwt:item>YuGiOh</gwt:item>
+		            <gwt:item>Pokemon</gwt:item>
+		            <gwt:item>Magic</gwt:item>
+		        </gwt:ListBox>
+		        <!-- Pulsante di ricerca -->
+		        <gwt:Button ui:field="searchButton" text="Cerca"/>
+			</div>
+			<div>
+				<g:FlowPanel ui:field="flowPanel"></g:FlowPanel>
+			</div>
+		</div>
+		<div class="{style.right}">
+			<h1>Le tue carte possedute:</h1>
+			<h2>Yu-Gi-Oh</h2>
+			<g:FlowPanel ui:field="ypanel"></g:FlowPanel>
+			<h2>Pokemon</h2>
+			<g:FlowPanel ui:field="ppanel"></g:FlowPanel>
+			<h2>Magic</h2>
+			<g:FlowPanel ui:field="mpanel"></g:FlowPanel>
+		</div>
+		<div class="{style.right}">
+			<h1>Le carte desiderate:</h1>
+			<g:FlowPanel ui:field="dpanel"></g:FlowPanel>
+		</div>
+
+	</g:HTMLPanel>
+	
+	
+</ui:UiBinder> 

@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.gwt-Button{
+			margin-right: 10px !important;
+
+		}
+		.box1{
+			text-align: center;
+		}
+		h1{
+			margin-bottom:3px;
+		}
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<h1>Card Details</h1>
+		<div class="{style.box1}">
+			<gwt:Button ui:field = "btnHome" text="Home"/>
+			<gwt:Button ui:field = "btnScambi" text="Scambi"/>
+			<gwt:Button ui:field = "btnDeck" text="I tuoi deck"/>
+			<gwt:Button ui:field = "btnLogout" text="Logout"/>
+		</div>
+		<gwt:FlowPanel ui:field="imagePanel" />
+		<gwt:FlowPanel ui:field="testoCarta" />
+		<gwt:Button ui:field = "btnAdd" text="Aggiungi alle carte possedute"/>
+		<gwt:Button ui:field = "btnPrefe" text="Aggiungi alle carte desiderate"/>
+		<gwt:Button ui:field = "btnCerco" text="Voglio questa carta"/>
+		<gwt:Button ui:field = "btnCedo" text="Cedo questa carta"/>
+		<h1>Chi la possiede</h1>
+		<gwt:FlowPanel ui:field="owners" />
+	</g:HTMLPanel>
+</ui:UiBinder>

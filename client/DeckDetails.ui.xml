@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.gwt-Button{
+			margin-right: 10px !important;
+
+		}
+		.box1{
+			text-align: center;
+		}
+		h1{
+			margin-bottom:3px;
+		}
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<h1>Deck Details</h1>
+		<div class="{style.box1}">
+			<gwt:Button ui:field = "btnHome" text="Home"/>
+			<gwt:Button ui:field = "btnScambi" text="Scambi"/>
+			<gwt:Button ui:field = "btnDeck" text="I tuoi deck"/>
+			<gwt:Button ui:field = "btnLogout" text="Logout"/>
+		</div>
+		<h1>Lista di carte nel deck</h1>
+		<g:FlowPanel ui:field="deckcards"></g:FlowPanel>
+		<h1>Lista di carte da aggiungere al deck</h1>
+		<p>Basta cliccare su una carta e verrà aggiunta al deck</p>
+		<g:FlowPanel ui:field="allcards"></g:FlowPanel>
+		<gwt:Button ui:field = "deleteDeck" text="Elimina questo deck"/>
+	</g:HTMLPanel>
+</ui:UiBinder>

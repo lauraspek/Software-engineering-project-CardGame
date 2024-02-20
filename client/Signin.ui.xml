@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+		form {
+		    width: 30vw;
+		    margin: auto;
+		}
+		
+		.form-group {
+		    margin-bottom: 5rem;
+		    text-align:center;
+		    display: block;
+		}
+		.login{
+			width: 300px;
+			margin-top:10px;
+		}
+		.input{
+			width: 300px;
+			display: block;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<h1>Registrati al nostro sito web</h1>
+		<gwt:Label ui:field="registrationResult" />
+		<form>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <gwt:TextBox ui:field="txtMail" addStyleNames="{style.input}"></gwt:TextBox>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Password</label>
+		    <gwt:PasswordTextBox ui:field="txtPassword" addStyleNames="{style.input}"></gwt:PasswordTextBox>
+		  </div>
+		 
+		  <gwt:Button ui:field="btnSubmit" text="Signin" addStyleNames="{style.login}"></gwt:Button>
+		  <gwt:Button ui:field="Login" text="I have an account" addStyleNames="{style.login}"></gwt:Button>
+		  
+		</form>
+	</g:HTMLPanel>
+</ui:UiBinder> 

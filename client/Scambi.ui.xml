@@ -1,0 +1,57 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.gwt-Button{
+			margin-right: 10px !important;
+
+		}
+		.box1{
+			text-align: center;
+		}
+		h1{
+			margin-bottom:3px;
+		}
+		td{
+        	border: 1px solid black;
+    	}
+    	table{
+			margin:10px;
+		}
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<h1>Scambi</h1>
+		<div class="{style.box1}">
+			<gwt:Button ui:field = "btnHome" text="Home"/>
+			<gwt:Button ui:field = "btnScambi" text="Scambi"/>
+			<gwt:Button ui:field = "btnDeck" text="I tuoi deck"/>
+			<gwt:Button ui:field = "btnLogout" text="Logout"/>
+		</div>
+		<div>
+			<h1>Bozza scambio</h1>
+			<label for="search">Email destinatario</label>
+			<gwt:TextBox ui:field="dest" />
+			<h2>Carte da cedere</h2>
+			<gwt:ListBox ui:field="carteCedute">
+		            <gwt:item>Lista Carte da cedere</gwt:item>
+		        </gwt:ListBox>
+			<h2>Carte che vuoi in cambio</h2>
+			<gwt:ListBox ui:field="carteVolute">
+		            <gwt:item>Lista carte da prendere</gwt:item>
+		        </gwt:ListBox>
+		     
+		    <gwt:Button ui:field="sendscambio" text="Invia scambio"/>
+		</div>
+		<h1>Richieste di scambio</h1>
+		<g:VerticalPanel>
+            <g:FlexTable ui:field="scambiTable"/>
+        </g:VerticalPanel>
+		
+		<g:FlowPanel>
+                <g:FlowPanel ui:field="mainPanel" />
+        </g:FlowPanel>
+
+	</g:HTMLPanel>
+</ui:UiBinder>

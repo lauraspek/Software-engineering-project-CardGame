@@ -1,0 +1,52 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.gwt-Button{
+			margin-right: 10px !important;
+
+		}
+		.box1{
+			text-align: center;
+		}
+		h1{
+			margin-bottom:3px;
+		}
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<h1>I tuoi deck</h1>
+		<div class="{style.box1}">
+			<gwt:Button ui:field = "btnHome" text="Home"/>
+			<gwt:Button ui:field = "btnScambi" text="Scambi"/>
+			<gwt:Button ui:field = "btnDeck" text="I tuoi deck"/>
+			<gwt:Button ui:field = "btnLogout" text="Logout"/>
+		</div>
+		<div>
+				<label>Nome deck</label>
+		        <gwt:TextBox ui:field="nameDeck" />
+		        <!-- List box per la scelta del gioco -->
+		        <gwt:ListBox ui:field="gameListBox">
+		            <gwt:item>Seleziona un gioco</gwt:item>
+		            <gwt:item>YuGiOh</gwt:item>
+		            <gwt:item>Pokemon</gwt:item>
+		            <gwt:item>Magic</gwt:item>
+		        </gwt:ListBox>
+		        <!-- Pulsante di ricerca -->
+		        <gwt:Button ui:field="createDeck" text="Crea Deck"/>
+			</div>
+		<div>
+			<h1>Deck YuGiOh</h1>
+			<g:FlowPanel ui:field="ypanel"></g:FlowPanel>		
+		</div>
+		<div>
+			<h1>Deck Magic</h1>
+			<g:FlowPanel ui:field="mpanel"></g:FlowPanel>
+		</div>
+		<div>
+			<h1>Deck Pokemon</h1>
+			<g:FlowPanel ui:field="ppanel"></g:FlowPanel>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>
